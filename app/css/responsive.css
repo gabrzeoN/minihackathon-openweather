@@ -5,12 +5,9 @@
         justify-content: center;
     }
 
-    .title{
-        background-color: yellow;
-    }
-
     .weather{
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
     }
