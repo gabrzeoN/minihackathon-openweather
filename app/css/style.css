@@ -48,14 +48,17 @@ body * {
     font-weight: 700;
 }
 
+.search {
+    margin-top: 45px;
+}
 
 .search button {
-
     width: 100px;
 }
 
 .search h2 {
     margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .hidden {

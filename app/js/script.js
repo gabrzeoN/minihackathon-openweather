@@ -9,9 +9,9 @@ function callApiWeather() {
 }
 
 function createHTML(response) {
+  showLocationSearch();
   document.querySelector(".without-weather").classList.add("hidden");
 
-  console.log(response.data);
   const wheatherInformation = document.querySelector(".weather");
   const cityName = response.data.name;
   const cityTemperature = response.data.main.temp;
@@ -66,7 +66,7 @@ function showError(error) {
   showLocationSearch();
   switch (error.code) {
     case error.PERMISSION_DENIED:
-      console.log("Usuario Negou a Permissão");
+      console.log("User denied the request for Geolocation.");
       break;
     case error.POSITION_UNAVAILABLE:
       console.log("Location information is unavailable.");
