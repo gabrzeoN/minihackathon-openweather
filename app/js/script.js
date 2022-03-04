@@ -1,5 +1,5 @@
-const latitude = null;
-const longitude = null;
+let latitude = null;
+let longitude = null;
 
 function getLocation() {
   if (navigator.geolocation) {
