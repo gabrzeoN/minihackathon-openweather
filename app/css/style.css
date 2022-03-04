@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+}
+
+body * {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather div{
+    display: flex;
+    font-size: 30px;
+}
