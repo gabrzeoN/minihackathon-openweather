@@ -5,7 +5,8 @@
 body {
     margin: auto;
     margin-top: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
+    background-color: darkgray;
 }
 
 body * {
@@ -20,26 +21,30 @@ body * {
     margin-bottom: 50px;
 }
 
-.without-weather{
+.without-weather {
     margin-bottom: 20px;
 }
 
-.weather h2{
+.weather h2 {
     font-weight: 700;
     font-size: 30px;
 }
 
-.weather div{
+.weather div {
     display: flex;
     font-size: 50px;
     font-weight: 900;
 }
 
-.search button{
-    
+.search button {
+
     width: 100px;
 }
 
-.search h2{
+.search h2 {
     margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
 }
