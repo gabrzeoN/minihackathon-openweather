@@ -18,6 +18,8 @@ function createHTML(response) {
   const iconWheather = response.data.weather[0].icon;
   const feelsLike = response.data.main.feels_like;
   const humidity = response.data.main.humidity;
+  const windSpeed = response.data.wind.speed;
+
 
   wheatherInformation.innerHTML = `
       <h2>${cityName}</h2>
@@ -27,14 +29,19 @@ function createHTML(response) {
     </article>
 
     <article>
-      <div class="otherConditions">
+      <div class="other-conditions">
         <p>Sensação Térmica</p>
         <p>${feelsLike}ºC</p>
       </div>
 
-    <div class="feels-like">
+    <div class="other-conditions">
         <p>Umidade</p>
         <p>${humidity}%</p>
+      </div>
+
+    <div class="other-conditions">
+        <p>Velocidade do Vento</p>
+        <p>${windSpeed}m/s</p>
       </div>
     </article>
     `;

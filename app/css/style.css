@@ -36,13 +36,13 @@ body * {
     font-weight: 900;
 }
 
-.feels-like {
+.other-conditions {
     font-size: 20px;
     font-weight: 900;
     margin-right: 15px
 }
 
-.feels-like p:first-child {
+.other-conditions p:first-child {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 700;
