@@ -1,0 +1,17 @@
+@media (max-width: 900px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title{
+        background-color: yellow;
+    }
+
+    .weather{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
