@@ -4,6 +4,8 @@
 
 body {
     margin: auto;
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
 }
 
 body * {
@@ -12,7 +14,32 @@ body * {
     align-items: center;
 }
 
+.title {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+
+.without-weather{
+    margin-bottom: 20px;
+}
+
+.weather h2{
+    font-weight: 700;
+    font-size: 30px;
+}
+
 .weather div{
     display: flex;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.search button{
+    
+    width: 100px;
+}
+
+.search h2{
+    margin-bottom: 15px;
 }
