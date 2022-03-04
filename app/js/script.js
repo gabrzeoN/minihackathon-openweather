@@ -11,14 +11,15 @@ function callApiWeather() {
 function createHTML(response) {
   const wheatherInformation = document.querySelector(".weather");
   const cityName = response.data.name;
-  console.log(cityName);
-  console.log(response.data)
   const cityTemperature = response.data.main.temp;
+  const iconWheather = response.data.weather[0].icon;
+
+  console.log(response.data);
 
   wheatherInformation.innerHTML = `
       <h2>${cityName}</h2>
     <div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
+      <img src="http://openweathermap.org/img/wn/${iconWheather}@2x.png" alt="" />
       <p>${cityTemperature}ºC</p>
     </div>
     `;
@@ -33,6 +34,7 @@ function getLocation() {
 }
 
 function showPosition(position) {
+  console.log(position);
   latitude = parseInt(position.coords.latitude);
   longitude = parseInt(position.coords.longitude);
   callApiWeather();
