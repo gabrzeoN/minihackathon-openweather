@@ -9,17 +9,34 @@ function callApiWeather() {
 }
 
 function createHTML(response) {
+  document.querySelector(".without-weather").classList.add("hidden");
+
+  console.log(response.data);
   const wheatherInformation = document.querySelector(".weather");
   const cityName = response.data.name;
   const cityTemperature = response.data.main.temp;
   const iconWheather = response.data.weather[0].icon;
+  const feelsLike = response.data.main.feels_like;
+  const humidity = response.data.main.humidity;
 
   wheatherInformation.innerHTML = `
       <h2>${cityName}</h2>
-    <div>
+    <article>
       <img src="http://openweathermap.org/img/wn/${iconWheather}@2x.png" alt="" />
       <p>${cityTemperature}ºC</p>
-    </div>
+    </article>
+
+    <article>
+      <div class="otherConditions">
+        <p>Sensação Térmica</p>
+        <p>${feelsLike}ºC</p>
+      </div>
+
+    <div class="feels-like">
+        <p>Umidade</p>
+        <p>${humidity}%</p>
+      </div>
+    </article>
     `;
 }
 
@@ -32,7 +49,6 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  console.log(position);
   latitude = (position.coords.latitude);
   longitude = (position.coords.longitude);
   callApiWeather();
@@ -64,7 +80,6 @@ function showLocationSearch() {
 function searchLocation() {
   const cityName = document.getElementById("cityName").value;
   const countryCode = document.getElementById("countryCode").value;
-  console.log(cityName);
 
   const promise = axios
     .get(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${countryCode}&limit=5&appid=80a839bb2d8a77c600954c9c171bd4a5
@@ -74,11 +89,8 @@ function searchLocation() {
 }
 
 function convertGeolocation(response) {
-  console.log(response.data);
   latitude = (response.data[0].lat);
-  console.log(latitude);
   longitude = (response.data[0].lon);
-  console.log(longitude);
   callApiWeather();
 }
 
